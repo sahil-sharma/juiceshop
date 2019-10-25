@@ -3,7 +3,12 @@ set -e
 echo -e ""
 echo -e "We are setting up Kubernetes using kubeadm on Ubuntu:18.04"
 echo ""
-sudo su -
+
+if [ "$(id -u)" != "0" ]; then
+   echo "This script must be run as root."
+   exit 1
+fi
+echo ""
 echo -e "Turning off swap"
 swapoff -a
 echo -e "Installing dependencies"
