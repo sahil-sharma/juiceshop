@@ -16,8 +16,8 @@ Step 3: Deploy Juiceshop application and expose via Ingress
 
 Step 4: Enable modsecurity for Ingress to prevent SQLinjection
 
-Note: cluster-setup.sh script will perform all the above mentioned steps.
-
 Ref: https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#lua-resty-waf
+
+Note: cluster-setup.sh script will perform all the above mentioned steps.
 
 To allow certain CIDR range have an access to kube-apiserver can de done via either using NACL (subnet level) or via SecurityGroups (instance level). We need to whitelist those IP's for kube-apiserver (port: 6443) to have an inbound connection only from those IP's.
