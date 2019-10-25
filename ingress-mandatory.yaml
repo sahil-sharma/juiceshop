@@ -287,6 +287,8 @@ metadata:
 spec:
   type: NodePort
   ports:
+    - name: ingressport
+      nodePort: 32000
     - name: http
       port: 80
       targetPort: 80

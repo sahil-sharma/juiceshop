@@ -1,0 +1,11 @@
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
+metadata:
+  name: juiceshop
+  namespace: juiceshop
+spec:
+  minAvailable: 80%
+  selector:
+    matchLabels:
+      app: juiceshop
+      env: prod
