@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: juiceshop
+  labels:
+    app: juiceshop
+    env: prod
